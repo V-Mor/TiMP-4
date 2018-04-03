@@ -1,0 +1,14 @@
+﻿  Source.cpp
+d:\visual studio 2015\projects\тимп4\тимп4\tree.h(37): warning C4018: <=: несоответствие типов со знаком и без знака
+  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(29): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(67): note: см. ссылку на создание экземпляров функции шаблон при компиляции "node<T> *Tree<T>::findNode(int,node<T> *)"
+          with
+          [
+              T=int
+          ]
+  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(64): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(23): note: см. ссылку на создание экземпляров функции шаблон при компиляции "void Tree<int>::clear(void)"
+  d:\visual studio 2015\projects\тимп4\тимп4\source.cpp(6): note: см. ссылку на создание экземпляров класса шаблон при компиляции "Tree<int>"
+d:\visual studio 2015\projects\тимп4\тимп4\tree.h(44): warning C4715: Tree<int>::findNode: значение возвращается не при всех путях выполнения
+  ТиМП4.vcxproj -> D:\Visual Studio 2015\Projects\ТиМП4\Debug\ТиМП4.exe
+  ТиМП4.vcxproj -> D:\Visual Studio 2015\Projects\ТиМП4\Debug\ТиМП4.pdb (Full PDB)
