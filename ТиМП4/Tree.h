@@ -16,11 +16,11 @@ class Tree
 	node<T> * findNode(int, node<T>*);
 public:
 	int addNode(T, int);
-	void clear();
+	void clear(node<T> *);
 	Tree(T x);
 	~Tree()
 	{
-		clear();
+		clear(root);
 	}
 };
 
@@ -60,20 +60,21 @@ int Tree<T>::addNode(T x, int id)
 }
 
 template<class T>
-void Tree<T>::clear()
+void Tree<T>::clear(node<T> *deleting)
 {
-	for (int i = curr; i >= 0; i--)
+	if (!deleting->children)
 	{
-		node<T> * temp = findNode(i, root);
-		if (temp->parent)
+		if (deleting->parent)
 		{
-			((temp->parent)->children)->pop_back();
-			if (!((temp->parent)->children)->size())
-				(temp->parent)->children = NULL;
+			((deleting->parent)->children)->pop_back();
+			if (!((deleting->parent)->children)->size())
+				(deleting->parent)->children = NULL;
 		}
-		delete temp;
+		delete deleting;
 	}
-	curr = -1;
+	else
+		for (int i = 0; i <= (deleting->children)->size() - 1; ++i)
+			clear((*(deleting->children))[i]);
 }
 
 template<class T>
