@@ -3,6 +3,7 @@
 #include"Tree.h"
 int main()
 {
+	setlocale(0, "");
 	Tree<int> der(5);
 	der.addNode(15, 0);
 	der.addNode(15, 1);

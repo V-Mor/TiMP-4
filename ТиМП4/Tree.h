@@ -12,14 +12,14 @@ template <class T>
 class Tree
 {
 	node<T> * root;
-	int curr;						//Счётчик текущего идентификатора
+	int curr;									//Счётчик текущего идентификатора
 	node<T> * findNode(int, node<T>*);
-	int getIncNumber(T, node<T>*);
-	void clear(node<T> *);
+	int getIncNumber(T, node<T>*);				//Поиск кол-ва вхождений по указателю на корень поддерева
+	void clear(node<T> *);						//Удаление по указателю на корень поддерева
 public:
 	void clear(int subtree_id);
-	int getIncNumber(T value, int subtree_id);
-	int addNode(T value, int subtree_id);
+	int getIncNumber(T value, int subtree_id);	//Поиск кол-ва вхождений по id поддерева
+	int addNode(T value, int subtree_id);		//Удаление по id поддерева
 	Tree(T value);
 	~Tree()
 	{
@@ -68,16 +68,27 @@ int Tree<T>::addNode(T x, int id)
 }
 
 template<class T>
-void Tree<T>::clear(int id)
+void Tree<T>::clear(int id)						//Перегрузка для пользователя
 {
 	node<T> * deleting = findNode(id, root);
-	return clear(deleting);
+	clear(deleting);
+	if (!id)									//Если удаляем с корня
+		root = NULL;
 }
 
 template<class T>
 void Tree<T>::clear(node<T> *deleting)
 {
-	if (!deleting->children)
+	if (!deleting)
+		return;
+	if (deleting->children)
+	{
+		int size = (deleting->children)->size() - 1;
+		for (int i = size; i >= 0; --i)
+			clear((*(deleting->children))[i]);
+		clear(deleting);
+	}
+	else
 	{
 		if (deleting->parent)
 		{
@@ -87,16 +98,10 @@ void Tree<T>::clear(node<T> *deleting)
 		}
 		delete deleting;
 	}
-	else
-	{
-		int size = (deleting->children)->size() - 1;
-		for (int i = 0; i <= size; ++i)
-			clear((*(deleting->children))[i]);
-	}
 }
 
 template<class T>
-int Tree<T>::getIncNumber(T x, int id)
+int Tree<T>::getIncNumber(T x, int id)			//Перегрузка для пользователя
 {
 	node<T> * checking = findNode(id, root);
 	return getIncNumber(x, checking);
@@ -127,5 +132,5 @@ Tree<T>::Tree(T x)
 	root->id = 0;
 	root->parent = NULL;
 	root->children = NULL;
-	cout << "Создан корень с идентификатором 0" << endl;
+	cout << "Создан корень с идентификатором " << curr << endl;
 }

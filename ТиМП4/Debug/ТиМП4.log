@@ -1,21 +1,21 @@
 ﻿  Source.cpp
 d:\visual studio 2015\projects\тимп4\тимп4\tree.h(40): warning C4018: <=: несоответствие типов со знаком и без знака
   d:\visual studio 2015\projects\тимп4\тимп4\tree.h(32): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
-  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(101): note: см. ссылку на создание экземпляров функции шаблон при компиляции "node<T> *Tree<T>::findNode(int,node<T> *)"
+  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(106): note: см. ссылку на создание экземпляров функции шаблон при компиляции "node<T> *Tree<T>::findNode(int,node<T> *)"
           with
           [
               T=int
           ]
-  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(100): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
-  d:\visual studio 2015\projects\тимп4\тимп4\source.cpp(15): note: см. ссылку на создание экземпляров функции шаблон при компиляции "int Tree<int>::getIncNumber(T,int)"
+  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(105): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  d:\visual studio 2015\projects\тимп4\тимп4\source.cpp(16): note: см. ссылку на создание экземпляров функции шаблон при компиляции "int Tree<int>::getIncNumber(T,int)"
           with
           [
               T=int
           ]
-  d:\visual studio 2015\projects\тимп4\тимп4\source.cpp(6): note: см. ссылку на создание экземпляров класса шаблон при компиляции "Tree<int>"
-d:\visual studio 2015\projects\тимп4\тимп4\tree.h(115): warning C4018: <=: несоответствие типов со знаком и без знака
-  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(107): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
-  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(102): note: см. ссылку на создание экземпляров функции шаблон при компиляции "int Tree<int>::getIncNumber(T,node<T> *)"
+  d:\visual studio 2015\projects\тимп4\тимп4\source.cpp(7): note: см. ссылку на создание экземпляров класса шаблон при компиляции "Tree<int>"
+d:\visual studio 2015\projects\тимп4\тимп4\tree.h(120): warning C4018: <=: несоответствие типов со знаком и без знака
+  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(112): note: при компиляции функции-члена "<Нет данных>" класса <Нет данных>
+  d:\visual studio 2015\projects\тимп4\тимп4\tree.h(107): note: см. ссылку на создание экземпляров функции шаблон при компиляции "int Tree<int>::getIncNumber(T,node<T> *)"
           with
           [
               T=int
