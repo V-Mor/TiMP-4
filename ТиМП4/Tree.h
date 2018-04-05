@@ -43,6 +43,7 @@ node<T>* Tree<T>::findNode(int id1, node<T> * begin)
 			if (temp)
 				return temp;
 		}
+		return NULL;
 	}
 }
 
