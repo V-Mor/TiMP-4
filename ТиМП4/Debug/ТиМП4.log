@@ -21,5 +21,6 @@ d:\visual studio 2015\projects\тимп4\тимп4\tree.h(120): warning C4018: <
               T=int
           ]
 d:\visual studio 2015\projects\тимп4\тимп4\tree.h(47): warning C4715: Tree<int>::findNode: значение возвращается не при всех путях выполнения
+  LINK : не найден или не выполнена сборка D:\Visual Studio 2015\Projects\ТиМП4\Debug\ТиМП4.exe при последней инкрементной компоновке; выполняется полная компоновка
   ТиМП4.vcxproj -> D:\Visual Studio 2015\Projects\ТиМП4\Debug\ТиМП4.exe
   ТиМП4.vcxproj -> D:\Visual Studio 2015\Projects\ТиМП4\Debug\ТиМП4.pdb (Full PDB)
