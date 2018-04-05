@@ -68,7 +68,7 @@ int Tree<T>::addNode(T x, int id)
 }
 
 template<class T>
-void Tree<T>::clear(int id = 0)						//Перегрузка для пользователя
+void Tree<T>::clear(int id)						//Перегрузка для пользователя
 {
 	node<T> * deleting = findNode(id, root);
 	clear(deleting);
@@ -101,7 +101,7 @@ void Tree<T>::clear(node<T> *deleting)
 }
 
 template<class T>
-int Tree<T>::getIncNumber(T x, int id = 0)			//Перегрузка для пользователя
+int Tree<T>::getIncNumber(T x, int id)			//Перегрузка для пользователя
 {
 	node<T> * checking = findNode(id, root);
 	return getIncNumber(x, checking);
